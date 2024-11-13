@@ -1,0 +1,153 @@
+@use "../abstract" as *;
+@use "../base/" as *;
+
+.blogBanner {
+  position: relative;
+  background: url(/IMG/wow.png);
+  background-color: $clr--dark;
+  width: 96vw;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+
+  display: flex;
+  font-display: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+  &__wrapper {
+    padding: 2rem 1rem;
+  }
+
+  //   rotated images
+
+  &__content {
+    position: relative;
+    font-family: $font--primary;
+
+    h1 {
+      color: $clr--light;
+      font-size: 6rem;
+      font-weight: 700;
+    }
+    p {
+      margin-bottom: 2rem;
+      color: $clr--light;
+      img {
+        position: absolute;
+        width: 10rem;
+        left: 100%;
+        height: 10rem;
+      }
+      img:last-child {
+        position: absolute;
+        width: 10rem;
+        left: -10%;
+        height: 10rem;
+      }
+    }
+    a.btn.bg--accent {
+      margin-top: 2rem;
+      border-radius: 0rem;
+      &:hover {
+        background-color: $clr--light;
+        border: 1px solid $clr--dark;
+        color: $clr--dark;
+      }
+    }
+  }
+}
+
+.blogPost {
+  background-color: #fff;
+  padding: 5rem 0;
+
+  &__wrapper {
+    padding: 2rem 1rem;
+  }
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    p {
+      max-width: 70rem;
+    }
+  }
+
+  &__blog {
+    display: flex;
+    gap: 1rem;
+    img {
+      width: 350px;
+      height: 150px;
+    }
+    &--details {
+      color: $clr--dark;
+      h2 {
+        font-weight: 700;
+        font-size: 1.5rem;
+      }
+      p {
+        margin-bottom: 1rem;
+      }
+      .dates {
+        margin-bottom: 1rem;
+      }
+    }
+  }
+}
+
+.homeBottom {
+  font-family: $clr--light;
+  padding: 5rem 0;
+
+  .container {
+    padding: 0rem 0rem;
+  }
+
+  &__wrapper {
+    display: flex;
+  }
+
+  .image__slider {
+    position: relative;
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h2 {
+      font-size: 3rem;
+      font-weight: 700;
+    }
+    small {
+      opacity: 0.9;
+      display: flex;
+      color: $clr--dark;
+      i {
+        color: purple;
+
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .cards {
+    position: relative;
+    img {
+      position: relative;
+      width: 100vw;
+      height: 300px;
+    }
+  }
+  //second card is a black sheep
+  // .cards--a{
+  //   img{
+  //     width: 100%;
+  //     height: 90%;
+  //   }
+  // }
+}

@@ -1,0 +1,64 @@
+@use "../base/" as *;
+@use "../abstract" as *;
+
+.btn {
+  padding: 0.8rem 2rem;
+  background-color: transparent;
+  border: 1px solid transparent;
+  font-size: 1rem;
+
+  &.bg--accent {
+    @extend .btn;
+    background-color: $clr--accent;
+    border-radius: 2rem;
+    color: $clr--light;
+    font-weight: 600;
+    box-shadow: rgba(231, 4, 4, 0.1) 0px 4px 12px;
+    &:hover {
+      background-color: $clr--accent;
+      border: 1px solid $clr--accent;
+      color: $clr--light;
+    }
+  }
+  &.bg--outline {
+    @extend .bg--accent;
+    background-color: transparent;
+    border-radius: 2rem;
+    border: 1px solid $clr--accent;
+  }
+  &.bg--radius {
+    @extend .bg--outline;
+    color: $clr--accent;
+    font-weight: 300;
+    padding: 0.5rem 1rem;
+    border-radius: 0.3rem;
+    width: fit-content;
+  }
+  &.bg--footer {
+    @extend .btn;
+    padding: 0.2rem 2rem;
+    background-color: $clr--accent;
+    border-radius: 2rem;
+    color: $clr--light;
+    font-weight: 600;
+    box-shadow: rgba(231, 4, 4, 0.1) 0px 4px 12px;
+    &:hover {
+      border: 1px solid $clr--accent;
+      background-color: $clr--light;
+      color: $clr--light;
+    }
+  }
+
+  &.bg--banner {
+    @extend .btn;
+    background-color: $clr--dark;
+    border-radius: 10rem;
+    color: $clr--light;
+    font-weight: 700;
+  }
+  &:hover{
+    border: 1px solid $clr--dark;
+    background-color: $clr--light;
+    color: $clr--dark;
+  }
+}

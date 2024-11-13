@@ -1,0 +1,86 @@
+@use "../abstract" as *;
+@use "../base/" as *;
+
+.footer {
+  padding: 5rem 0;
+  font-family: $font--primary;
+
+  // para pumantay
+  // .container {
+  //   padding: 0rem 0rem;
+  //   margin: 0rem 5rem;
+  // }
+
+  &__wrapper {
+    padding: 2rem 1rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+  }
+
+  .title {
+    flex-direction: column;
+    color: $clr--light;
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+  }
+  &__nav {
+    display: flex;
+    gap: 2rem;
+    a {
+      color: $clr--dark;
+    }
+  }
+  &__nav2 {
+    display: flex;
+    gap: 2rem;
+    a {
+      color: $clr--dark;
+    }
+  }
+
+  &__others {
+    display: flex;
+    justify-content: space-between;
+
+    p a {
+      color: $clr--accent;
+    }
+
+    .socialMedia {
+      position: relative;
+      display: block;
+      white-space: nowrap;
+      li {
+        position: relative;
+        display: inline-block;
+      }
+      li a {
+        font-size: 1.5rem;
+        width: 43px;
+        height: 43px;
+        position: relative;
+        color: $clr--dark;
+        border: 1px solid rgba(71, 68, 68, 0.205);
+        border-radius: 0rem;
+        display: inline-block;
+        text-align: center;
+        &:hover {
+          color: $clr--light;
+          background-color: $clr--dark;
+          border: 1px solid $clr--dark;
+        }
+      }
+
+      .others {
+        letter-spacing: 0rem;
+      }
+    }
+  }
+}
